@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&family=Montserrat&display=swap');
+
+:root{
+    --primary: #FFFFFC;
+    --secondary:#0E131F;
+    --accent-1:#985F99;
+    --accent-2: #00B2CA;
+    --accent-3: #F79256;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    padding:0;
+    margin:0;
+    background:var(--primary);
+    color:var(--secondary);
+}
+
+h1, h2, h3, h4,h5, h6{
+    font-family:'Lexend Zetta', sans-serif;
+}
+
+p, span, li, a{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color:var(--secondary);
+}
+
+.header{
+    padding:20px;
+    background:var(--accent-3);
+    text-align:center;
+    color:var(--primary);
+}
+
+.wrapper{
+    display:flex;
+    justify-content: center;
+    padding:20px;
+}
+
+.list{
+    display:flex;
+    flex-wrap:wrap;
+    list-style-type:none;
+}
+
+.list li{
+    width:350px;
+}
+
+.list li img{
+    width:300px;
+    height:300px;
+    border:solid 5px var(--accent-2);
+}
+
+.list .subtitle{
+    font-size:1.5rem;
+    width:50%;
+    border-bottom:5px solid var(--accent-1);
+}
+
+.list p{
+    font-size:1.2rem;
+}
