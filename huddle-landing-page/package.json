@@ -1,0 +1,19 @@
+{
+  "name": "huddle-landing-page",
+  "version": "1.0.0",
+  "description": "Fake landing page for a company",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "scss": "gulp sass",
+    "watch": "gulp sass:watch"
+  },
+  "author": "August",
+  "license": "MIT"
+}

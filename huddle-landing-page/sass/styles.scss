@@ -1,0 +1,148 @@
+:root {
+  --custom-pink: hsl(322, 100%, 66%);
+  --custom-cyan: hsl(192, 100%, 9%);
+  --custom-blue: hsl(207, 100%, 98%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section {
+  margin-top: 9%;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    margin-left: 17%;
+    font-size: 3.5em;
+  }
+
+  .try-btn {
+    width: 140px;
+    margin-top: 3%;
+    margin-right: 15%;
+    height: 40px;
+    background: transparent;
+    border: var(--custom-pink) solid 3px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 5px;
+    clear: both;
+  }
+}
+
+/* Main */
+.section-one {
+  text-align: center;
+  h2 {
+    text-transform: capitalize;
+  }
+  .mock-up {
+    margin-top: 70px;
+  }
+}
+
+.hero {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto 30px auto;
+
+  p {
+    font-size: 1.3em;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .colour-btn {
+    background: var(--custom-pink);
+    color: whitesmoke;
+    border: transparent solid 1px;
+    margin: 10px;
+    font-size: 1.3em;
+    padding: 30px;
+    width: 40%;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+}
+
+.section-two {
+  display: flex;
+  justify-content: space-evenly;
+  h2 {
+    font-size: 6em;
+  }
+  p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+.section-three {
+  img {
+    width: 50%;
+  }
+  .wave-top,
+  .wave-bottom {
+    width: 100%;
+  }
+  .wave-top {
+    margin-bottom: -10px;
+  }
+  .shape-content {
+    background: var(--custom-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .text {
+      width: 19%;
+      margin-left: 20%;
+    }
+    .image {
+      width: 50%;
+    }
+  }
+}
