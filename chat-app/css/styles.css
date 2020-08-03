@@ -1,62 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 :root {
-  --subheading-text:hsl(276, 100%, 81%);
-  --msg-bg:hsl(276, 100%, 91%);
-  --msg-user-one:hsl(276, 55%, 52%);
-  --msg-user-two:hsl(271, 15%, 43%);
-  --placeholder:hsl(206, 6%, 79%);
-  --main-heading:hsl(271, 36%, 24%);
-  --paragraph:hsl(270, 7%, 64%);
+  --subheading-text: hsl(276, 100%, 81%);
+  --msg-bg: hsl(276, 100%, 91%);
+  --msg-user-one: hsl(276, 55%, 52%);
+  --msg-user-two: hsl(271, 15%, 43%);
+  --placeholder: hsl(206, 6%, 79%);
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
   --lightgradient: hsl(293, 100%, 63%);
-  --darkgradient:hsl(264, 100%, 61%);
-  --white:hsl(0, 0%, 100%);
-  --appbg:hsl(270, 20%, 96%);
-  --btn:hsl(271, 36%, 24%);
-  --radiobtn:hsl(289, 100%, 72%); }
+  --darkgradient: hsl(264, 100%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --appbg: hsl(270, 20%, 96%);
+  --btn: hsl(271, 36%, 24%);
+  --radiobtn: hsl(289, 100%, 72%);
+  --second-shape: hsl(264, 33%, 97%); }
 
 * {
   box-sizing: border-box; }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
   background: var(--white);
   font-family: 'Rubik', sans-serif; }
 
+.main-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 5rem 0; }
+
 .shape {
   background-image: linear-gradient(var(--lightgradient), var(--darkgradient));
-  width: 500px;
-  height: 90vh;
-  border-bottom-left-radius: 300px;
-  border-bottom-right-radius: 200px;
+  width: 23rem;
+  height: 40rem;
   position: absolute;
-  left: -80px;
-  top: -150px; }
+  border-bottom-left-radius: 238px;
+  border-bottom-right-radius: 240px;
+  top: 0;
+  left: -8em; }
+
+.shape-two {
+  width: 23rem;
+  height: 40rem;
+  position: absolute;
+  background: var(--second-shape);
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  bottom: -5em;
+  right: -11em; }
 
 .wrapper {
-  width: 90%;
-  position: absolute;
-  top: 30%;
-  left: 20%;
   display: flex;
-  min-width: 500px;
-  max-width: 1000px;
-  justify-content: center; }
+  justify-content: space-between;
+  /* max-width: 42rem; */
+  width: calc(100% - 15rem);
+  margin: 0 auto;
+  /* align-items: center; */
+  min-height: 70vh;
+  flex-direction: row; }
 
 .phone {
+  z-index: 1;
   position: relative;
-  height: 520px;
-  min-width: 270px;
-  max-width: 270px;
+  height: 35em;
+  width: 17em;
+  top: -4em;
+  flex-shrink: 0;
+  margin-left: 10rem;
   border-radius: 30px;
-  top: -100px;
-  left: -100px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
   border: var(--white) 10px solid;
   background: var(--appbg);
+  overflow: hidden;
   /*  End of message exchange */ }
   .phone:before {
     content: '';
@@ -120,10 +142,14 @@ html, body {
         -o-border-radius: 50%; }
   .phone .message-exchange {
     background: var(--appbg);
-    height: 85%;
+    height: 100%;
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; }
-    .phone .message-exchange .msg-user-one, .phone .message-exchange .msg-user-two, .phone .message-exchange .prices {
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column; }
+    .phone .message-exchange .msg-user-one,
+    .phone .message-exchange .msg-user-two,
+    .phone .message-exchange .prices {
       width: 70%;
       border-radius: 5px;
       -webkit-border-radius: 5px;
@@ -137,18 +163,22 @@ html, body {
       .phone .message-exchange .msg-user-one p {
         background: var(--msg-bg);
         padding: 8px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px; }
     .phone .message-exchange .msg-user-two {
-      display: flex;
-      justify-content: flex-end;
-      margin: 5px -5px;
-      position: relative;
-      left: 30%;
+      align-self: flex-end;
       color: var(--msg-user-two); }
       .phone .message-exchange .msg-user-two p {
         background: var(--white);
         padding: 8px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px; }
     .phone .message-exchange .photo-msg {
       display: flex;
       justify-content: flex-end;
@@ -207,24 +237,23 @@ html, body {
         left: 5px; }
         .phone .message-exchange .submit .placeholder:after {
           content: '>';
-          position: relative;
-          left: 50%;
-          top: 2px;
+          position: absolute;
+          width: 1.5em;
+          height: 1.5em;
+          text-align: center;
+          right: 0em;
           color: var(--white);
           background-color: var(--btn);
-          padding: 6px;
           font-size: 20px;
           border-radius: 50%;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          -ms-border-radius: 50%;
-          -o-border-radius: 50%; }
+          -webkit-border-radius: 50%; }
 
 /*  End of phone */
 .text {
   padding: 10px;
   min-width: 300px;
-  max-width: 500px; }
+  max-width: 500px;
+  z-index: 2; }
   .text h2 {
     font-size: 40px;
     color: var(--main-heading);
@@ -234,19 +263,32 @@ html, body {
     color: var(--paragraph);
     line-height: 40px; }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 1000px) {
   .shape {
-    width: 400px;
-    height: 78vh; }
-  .phone {
-    left: 50px;
-    top: 20px;
-    margin-left: -20px; }
+    left: -4em; }
   .wrapper {
-    flex-direction: column;
-    position: initial;
-    min-width: 100vw; }
-  .text {
-    width: 100vw;
+    margin: 7rem auto; } }
+
+@media screen and (min-width: 680px) and (max-width: 980px) {
+  .wrapper {
+    flex-direction: column; }
+    .wrapper .text {
+      text-align: center; }
+  .shape-two {
+    bottom: -20em;
+    right: -2em; } }
+
+@media screen and (min-width: 320px) and (max-width: 678px) {
+  .shape {
+    top: 0;
+    left: -8em; }
+  .shape-two {
+    bottom: -7em;
+    right: -10rem; }
+  .wrapper {
     display: flex;
-    flex-direction: column; } }
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; }
+  .phone {
+    margin-left: 0; } }
