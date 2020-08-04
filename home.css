@@ -1,75 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&family=Montserrat&display=swap');
 
-:root{
-    --primary: #FFFFFC;
-    --secondary:#0E131F;
-    --accent-1:#985F99;
-    --accent-2: #00B2CA;
-    --accent-3: #F79256;
+:root {
+  --primary: #fffffc;
+  --secondary: #0e131f;
+  --accent-1: #985f99;
+  --accent-2: #00b2ca;
+  --accent-3: #f79256;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html,body{
-    padding:0;
-    margin:0;
-    background:var(--primary);
-    color:var(--secondary);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
-h1, h2, h3, h4,h5, h6{
-    font-family:'Lexend Zetta', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lexend Zetta', sans-serif;
 }
 
-p, span, li, a{
-    font-family: 'Montserrat', sans-serif;
+p,
+span,
+li,
+a {
+  font-family: 'Montserrat', sans-serif;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-a:visited{
-    color:var(--secondary);
+a:hover > .subtitle {
+  background-color: var(--accent-3);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  font-weight: 700;
 }
 
-.header{
-    padding:20px;
-    background:var(--accent-3);
-    text-align:center;
-    color:var(--primary);
+a:visited {
+  color: var(--secondary);
 }
 
-.wrapper{
-    display:flex;
-    justify-content: center;
-    padding:20px;
+.header {
+  padding: 20px;
+  background: var(--accent-3);
+  letter-spacing: 1em;
+  text-align: center;
+  color: var(--primary);
 }
 
-.list{
-    display:flex;
-    flex-wrap:wrap;
-    list-style-type:none;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-.list li{
-    width:350px;
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
-.list li img{
-    width:300px;
-    height:300px;
-    border:solid 5px var(--accent-2);
+.list li {
+  width: 350px;
 }
 
-.list .subtitle{
-    font-size:1.5rem;
-    width:50%;
-    border-bottom:5px solid var(--accent-1);
+.list .img-wrapper {
+  width: 200px;
+  height: 200px;
+  border: solid 5px var(--accent-2);
 }
 
-.list p{
-    font-size:1.2rem;
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.list .subtitle {
+  font-size: 1.5rem;
+  width: 50%;
+  border-bottom: 5px solid var(--accent-1);
+}
+
+.list p {
+  font-size: 1.2rem;
 }

@@ -58,9 +58,6 @@ button {
     h2 {
       font-size: 1.8em;
     }
-    p {
-      font-size: 0.7em;
-    }
   }
   .text,
   .image {
@@ -135,14 +132,9 @@ header {
 }
 
 .section-two {
-  display: flex;
-  justify-content: space-evenly;
   .left,
   .right {
     flex-direction: column;
-  }
-  img {
-    width: 20%;
   }
   h2 {
     font-size: 4em;
@@ -154,6 +146,11 @@ header {
   }
 }
 
+.icon {
+  margin-right: 40%;
+  text-align: left;
+}
+
 .section-three {
   img {
     width: 100%;
@@ -161,6 +158,21 @@ header {
   .inner-content {
     background: var(--custom-blue);
     align-items: center;
+  }
+  p {
+    font-size: 0.7em;
+  }
+}
+
+.section-four {
+  p {
+    font-size: 0.7em;
+  }
+}
+
+.section-five {
+  p {
+    font-size: 0.7em;
   }
 }
 
@@ -199,7 +211,6 @@ footer {
       .socials {
         margin-top: 2em;
         display: flex;
-        width: 50%;
         justify-content: space-between;
         a {
           text-decoration: none;
@@ -214,10 +225,14 @@ footer {
       }
     }
     .right {
-      width: 45%;
+      width: 55%;
       .header {
         font-size: 1em;
         font-weight: 600;
+      }
+      .form {
+        display: flex;
+        flex-wrap: wrap;
       }
       .form input {
         margin-top: 2em;
@@ -230,8 +245,11 @@ footer {
         -o-border-radius: 5px;
       }
       .subscribe {
-        width: 120px;
+        position: relative;
+        top: 20px;
         padding: 5px;
+        min-width: 100px;
+        max-height: 40px;
         border-radius: 2px;
         background: var(--custom-pink);
         color: white;
@@ -242,6 +260,65 @@ footer {
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper,
+  .inner-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button {
+    padding: 5px;
+    height: 2rem;
+    width: auto;
+    font-size: 10px;
+  }
+
+  .icon {
+    width: 10%;
+  }
+
+  .inner-content {
+    padding: 0;
+    flex-direction: column;
+    .left,
+    .right,
+    .text,
+    .image {
+      width: 100%;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
+
+  .inner-content .text {
+    order: 2;
+  }
+
+  footer .inner-content {
+    .left,
+    .right {
+      margin: 10px;
+    }
+    .left {
+      text-align: left;
+      order: 2;
+    }
+    .right {
+      text-align: right;
+    }
+    .subscribe {
+      margin: 5px;
+    }
+    .form {
+      position: relative;
+      right: -5em;
     }
   }
 }
