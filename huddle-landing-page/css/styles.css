@@ -14,7 +14,7 @@ body {
   background: whitesmoke; }
 
 .wrapper {
-  width: calc(100% - 19rem);
+  width: calc(100% - 29rem);
   margin: 0 auto; }
 
 h1,
@@ -33,9 +33,6 @@ button {
   button:hover {
     cursor: pointer; }
 
-.section {
-  margin-top: 3.5rem; }
-
 .wave-top {
   margin-bottom: -10px;
   width: 100%; }
@@ -53,22 +50,24 @@ button {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   header h1 {
     font-size: 2.2em; }
-  header .try-btn {
-    background: transparent;
-    color: var(--custom-pink);
-    border: var(--custom-pink) solid 1px;
-    margin: 38px;
-    font-size: 0.9em;
-    padding: 6px;
-    width: 100px;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px; }
+
+.try-btn {
+  background: transparent;
+  color: var(--custom-pink);
+  border: var(--custom-pink) solid 1px;
+  margin: 38px;
+  font-size: 0.9em;
+  padding: 6px;
+  width: 100px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px; }
 
 /* Main */
 .section-one {
@@ -137,6 +136,7 @@ header {
   font-size: 0.7em; }
 
 .section-six {
+  margin-bottom: 15em;
   text-align: center; }
   .section-six h2 {
     font-size: 1.7em;
@@ -211,7 +211,7 @@ footer .inner-content {
     margin: 0 auto;
     text-align: center; }
   .button {
-    padding: 5px;
+    padding: 4px 32px;
     height: 2rem;
     width: auto;
     font-size: 10px; }
@@ -220,6 +220,8 @@ footer .inner-content {
   .inner-content {
     padding: 0;
     flex-direction: column; }
+    .inner-content .right {
+      margin-top: 1em; }
     .inner-content .left,
     .inner-content .right,
     .inner-content .text,
@@ -229,6 +231,14 @@ footer .inner-content {
       font-size: 1em; }
   .inner-content .text {
     order: 2; }
+  header {
+    padding: 1em; }
+    header img {
+      width: 1em; }
+    header h1 {
+      font-size: 1em; }
+  .try-btn {
+    font-size: 0.7em; }
   footer .inner-content .left,
   footer .inner-content .right {
     margin: 10px; }
@@ -238,7 +248,4 @@ footer .inner-content {
   footer .inner-content .right {
     text-align: right; }
   footer .inner-content .subscribe {
-    margin: 5px; }
-  footer .inner-content .form {
-    position: relative;
-    right: -5em; } }
+    margin: 5px; } }

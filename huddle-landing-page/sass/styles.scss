@@ -18,7 +18,7 @@ body {
 }
 
 .wrapper {
-  width: calc(100% - 19rem);
+  width: calc(100% - 29rem);
   margin: 0 auto;
 }
 
@@ -40,10 +40,6 @@ button {
   &:hover {
     cursor: pointer;
   }
-}
-
-.section {
-  margin-top: 3.5rem;
 }
 
 .wave-top {
@@ -70,25 +66,26 @@ button {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   h1 {
     font-size: 2.2em;
   }
+}
 
-  .try-btn {
-    background: transparent;
-    color: var(--custom-pink);
-    border: var(--custom-pink) solid 1px;
-    margin: 38px;
-    font-size: 0.9em;
-    padding: 6px;
-    width: 100px;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-  }
+.try-btn {
+  background: transparent;
+  color: var(--custom-pink);
+  border: var(--custom-pink) solid 1px;
+  margin: 38px;
+  font-size: 0.9em;
+  padding: 6px;
+  width: 100px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
 }
 
 /* Main */
@@ -178,6 +175,7 @@ header {
 }
 
 .section-six {
+  margin-bottom: 15em;
   h2 {
     font-size: 1.7em;
     margin: 0;
@@ -274,7 +272,7 @@ footer {
   }
 
   .button {
-    padding: 5px;
+    padding: 4px 32px;
     height: 2rem;
     width: auto;
     font-size: 10px;
@@ -287,6 +285,9 @@ footer {
   .inner-content {
     padding: 0;
     flex-direction: column;
+    .right {
+      margin-top: 1em;
+    }
     .left,
     .right,
     .text,
@@ -300,6 +301,20 @@ footer {
 
   .inner-content .text {
     order: 2;
+  }
+
+  header {
+    padding: 1em;
+    img {
+      width: 1em;
+    }
+    h1 {
+      font-size: 1em;
+    }
+  }
+
+  .try-btn {
+    font-size: 0.7em;
   }
 
   footer .inner-content {
@@ -316,10 +331,6 @@ footer {
     }
     .subscribe {
       margin: 5px;
-    }
-    .form {
-      position: relative;
-      right: -5em;
     }
   }
 }
