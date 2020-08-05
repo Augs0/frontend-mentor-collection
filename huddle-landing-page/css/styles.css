@@ -47,6 +47,9 @@ button {
   .inner-content .image {
     width: 46%; }
 
+.button:hover {
+  background: #e23ca5; }
+
 /* Header */
 header {
   display: flex;
@@ -222,8 +225,6 @@ footer .inner-content {
     height: 2rem;
     width: auto;
     font-size: 10px; }
-    .button:hover {
-      background: #e23ca5; }
   .icon {
     width: 10%; }
   .inner-content {
