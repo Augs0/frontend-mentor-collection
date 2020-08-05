@@ -86,6 +86,10 @@ header {
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
+  &:hover {
+    background: hsl(322, 74%, 56%);
+    color: whitesmoke;
+  }
 }
 
 /* Main */
@@ -217,6 +221,9 @@ footer {
         i {
           color: whitesmoke;
           font-size: 2em;
+          &:hover {
+            color: hsl(322, 74%, 56%);
+          }
         }
         i:hover {
           cursor: pointer;
@@ -258,6 +265,9 @@ footer {
         -moz-border-radius: 2px;
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
+        &:hover {
+          background: hsl(322, 74%, 56%);
+        }
       }
     }
   }
@@ -276,6 +286,9 @@ footer {
     height: 2rem;
     width: auto;
     font-size: 10px;
+    &:hover {
+      background: hsl(322, 74%, 56%);
+    }
   }
 
   .icon {

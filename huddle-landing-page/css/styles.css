@@ -68,6 +68,9 @@ header {
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px; }
+  .try-btn:hover {
+    background: #e23ca5;
+    color: whitesmoke; }
 
 /* Main */
 .section-one {
@@ -169,6 +172,8 @@ footer .inner-content {
       footer .inner-content .left .socials i {
         color: whitesmoke;
         font-size: 2em; }
+        footer .inner-content .left .socials i:hover {
+          color: #e23ca5; }
       footer .inner-content .left .socials i:hover {
         cursor: pointer; }
   footer .inner-content .right {
@@ -203,6 +208,8 @@ footer .inner-content {
       -moz-border-radius: 2px;
       -ms-border-radius: 2px;
       -o-border-radius: 2px; }
+      footer .inner-content .right .subscribe:hover {
+        background: #e23ca5; }
 
 @media screen and (max-width: 768px) {
   .wrapper,
@@ -215,6 +222,8 @@ footer .inner-content {
     height: 2rem;
     width: auto;
     font-size: 10px; }
+    .button:hover {
+      background: #e23ca5; }
   .icon {
     width: 10%; }
   .inner-content {
