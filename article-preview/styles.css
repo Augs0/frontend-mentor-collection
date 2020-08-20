@@ -16,10 +16,9 @@ body {
 }
 
 .wrapper {
-  background-color: ghostwhite;
   width: 20rem;
   height: 32rem;
-  margin: 8em 1em;
+  margin: 20% auto;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -27,11 +26,21 @@ body {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  box-shadow: 5px 3px 5px var(--GrayishBlue);
 }
 
 .inner {
   margin-top: -3em;
   padding: 0 1em;
+}
+
+.larger-wrapper {
+  background-color: ghostwhite;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .wrapper .img-wrapper img {
@@ -169,5 +178,40 @@ body {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    flex-direction: row;
+    width: 70%;
+    height: 22rem;
+  }
+
+  .wrapper .img-wrapper img {
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+  }
+
+  .wrapper .inner {
+    margin-top: 0;
+    padding: 0 3em;
+    height: 60%;
+  }
+
+  .wrapper .inner .lead {
+    font-size: 1.2em;
+  }
+
+  .share {
+    min-height: 20%;
+    bottom: -16px;
+    position: relative;
+    border-bottom-left-radius: 0;
+  }
+
+  .toggle {
+    margin-left: -3em;
   }
 }
