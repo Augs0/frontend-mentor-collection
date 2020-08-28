@@ -1,0 +1,105 @@
+:root {
+  --DarkBlue: hsl(240, 38%, 20%);
+  --GrayishBlue: hsl(240, 18%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter';
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.bg {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: -1;
+  width: 400px;
+}
+
+.testimonial .student {
+  width: 300px;
+  height: 300px;
+}
+
+button {
+  z-index: 2;
+  padding: 20px;
+  background-color: white;
+}
+
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+}
+
+.prev {
+  margin-right: -10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.prev:before {
+  content: url('./src/img/icon-prev.svg');
+}
+
+.next {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.next:after {
+  content: url('./src/img/icon-next.svg');
+}
+
+.text {
+  position: relative;
+  font-size: 25px;
+  padding: 25px;
+  color: var(--DarkBlue);
+}
+
+.quotes {
+  position: absolute;
+  z-index: -1;
+  margin-left: 100px;
+  margin-top: -30px;
+  width: 80px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.job {
+  color: var(--GrayishBlue);
+  margin-top: -20px;
+}
+
+.curve {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  padding: 10px;
+}
