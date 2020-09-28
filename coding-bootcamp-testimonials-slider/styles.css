@@ -11,8 +11,13 @@ body,
 html {
   padding: 0;
   margin: 0;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
+  min-height: 100%;
   overflow-x: hidden;
+}
+
+main {
+  height: calc(100vh - 40px);
 }
 
 .container {
@@ -25,30 +30,45 @@ html {
 .testimonial {
   margin-top: 40px;
   padding: 20px;
+  height: 350px;
 }
 
 .bg {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+  position: relative;
+  top: -320px;
   z-index: -1;
-  width: 400px;
+  width: 370px;
 }
 
 .testimonial .student {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
+  border: 10px solid pink;
+  border-image: repeating-linear-gradient(
+      45deg,
+      purple,
+      #7f63d4 3%,
+      pink,
+      pink 4%
+    )
+    10;
+}
+
+nav {
+  position: relative;
+  top: -400px;
 }
 
 button {
   z-index: 2;
-  padding: 20px;
+  padding: 15px;
   background-color: white;
 }
 
 .prev:hover,
 .next:hover {
   cursor: pointer;
+  background-color: lavender;
 }
 
 .prev {
@@ -102,4 +122,48 @@ button {
 footer {
   display: flex;
   padding: 10px;
+  flex-direction: column;
+}
+
+footer a {
+  margin: 0 5px;
+}
+
+@media (min-width: 678px) {
+  .container {
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+  }
+  .bg {
+    top: -420px;
+    width: 470px;
+  }
+  .testimonial {
+    order: 2;
+  }
+  .quotation {
+    order: 1;
+    text-align: left;
+  }
+  .testimonial .student {
+    width: 380px;
+    height: 380px;
+  }
+  .text {
+    padding: 0;
+  }
+  nav {
+    left: -100px;
+    top: -480px;
+  }
+  footer {
+    flex-direction: row;
+  }
+  footer .attribution {
+    order: 1;
+  }
+  .curve {
+    width: 50%;
+  }
 }
