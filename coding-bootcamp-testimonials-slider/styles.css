@@ -18,6 +18,11 @@ html {
 
 main {
   height: calc(100vh - 40px);
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
 }
 
 .container {
@@ -43,6 +48,10 @@ main {
 .testimonial .student {
   width: 280px;
   height: 280px;
+  border: 10px transparent solid;
+}
+
+.testimonial .student:hover {
   border: 10px solid pink;
   border-image: repeating-linear-gradient(
       45deg,
@@ -52,6 +61,11 @@ main {
       pink 4%
     )
     10;
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
 }
 
 nav {
@@ -95,6 +109,8 @@ button {
   font-size: 25px;
   padding: 25px;
   color: var(--DarkBlue);
+  animation: move-in 3s;
+  -webkit-animation: move-in 3s;
 }
 
 .quotes {
@@ -108,11 +124,24 @@ button {
 .name {
   font-weight: 700;
   font-size: 20px;
+  animation: move-in 3s;
+  -webkit-animation: move-in 3s;
 }
 
 .job {
   color: var(--GrayishBlue);
   margin-top: -20px;
+  animation: move-in 3s;
+  -webkit-animation: move-in 3s;
+}
+
+@keyframes move-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .curve {
@@ -150,8 +179,12 @@ footer a {
     width: 380px;
     height: 380px;
   }
-  .text {
+  .text,
+  .job,
+  .name {
     padding: 0;
+    position: relative;
+    top: 100px;
   }
   nav {
     left: -100px;
