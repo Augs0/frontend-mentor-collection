@@ -38,6 +38,7 @@ a {
 
 a {
   text-decoration: none;
+  color: var(--secondary);
 }
 
 a:hover > .subtitle {
@@ -110,11 +111,6 @@ a:visited {
   .list .subtitle {
     font-size: 2rem;
     width: 50%;
-  }
-
-  .list .img-wrapper {
-    height: 20%;
-    width: 80%;
   }
 
   .list p {

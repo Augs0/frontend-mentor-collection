@@ -13,6 +13,11 @@ const feProjects = [
         name: "article-preview",
         friendly: "Article Preview",
         used: "HTML, CSS, Javascript"
+    },
+    {
+        name: "coding-bootcamp-testimonials-slider",
+        friendly: "Coding Bootcamp Testimonials",
+        used: "HTML, CSS, Javascript"
     }
 ]
 
@@ -24,7 +29,7 @@ feProjects.forEach(({ name, friendly, used }) => {
     item.innerHTML = `
     
     <div class="img-wrapper">
-    <img src="/${name}/starter_files/design/desktop-design.jpg" alt="${name}" />
+    <img src="/${name}/starter_files/design/desktop-preview.jpg" alt="${name}" />
     </div>
     <div class="text-wrapper">
         <a href="/${name}/index.html" aria-label="view ${friendly} project">
